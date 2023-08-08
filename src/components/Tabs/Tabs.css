@@ -65,6 +65,8 @@
   align-items: center;
   justify-content: center;
   background-color: var(--thirty-color);
+  transition: opacity 0.5s ease; 
+  opacity: 0; 
 }
 
 .tab-image-item {
@@ -130,4 +132,3 @@
 }
 
 }
-

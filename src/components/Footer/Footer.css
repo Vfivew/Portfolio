@@ -90,6 +90,9 @@
    margin-bottom: 10px;
    font-weight:500
 }
+
+.contact a:focus,
+.socialNetworks a:focus,
 .contact a:hover,
 .socialNetworks a:hover,
 .icon-wrapper:hover .iconify {

@@ -6,19 +6,30 @@ import './Slider.css';
 const Slider = ({ onClose, selectedImageIndex }) => {
   const sliderRef = useRef();
   const [activeIndex, setActiveIndex] = useState(selectedImageIndex);
+  const [closing, setClosing] = useState(false);
 
   const handleCloseSlider = () => {
-    onClose(activeIndex);
+    setClosing(true);
   };
 
   const handleSliderClick = (e) => {
     if (e.target.tagName === 'DIV') {
       handleCloseSlider();
-    } 
+    }
+  };
+
+  const handleAnimationEnd = () => {
+    if (closing) {
+      onClose(activeIndex);
+    }
   };
 
   return (
-    <div className='slider-overlay' onClick={handleSliderClick}>
+    <div
+      className={`slider-overlay ${closing ? 'closing' : ''}`}
+      onClick={handleSliderClick}
+      onAnimationEnd={handleAnimationEnd} 
+    >
       <div className='slider-container' ref={sliderRef}>
         <button className='slider-close-button' onClick={handleCloseSlider}>
           Згорнути

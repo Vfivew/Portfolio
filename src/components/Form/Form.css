@@ -9,6 +9,16 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 3;
+  animation: fadeIn 0.3s ease-in-out; 
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .modal-content-inner {
@@ -66,7 +76,8 @@ select {
   outline: none; 
   transition: transform 0.4s; 
 }
-.submit-button:hover{
+.submit-button:hover,
+.submit-button:focus{
   transform: scale(0.85);
 }
 
@@ -88,7 +99,8 @@ select {
   transition: transform 0.4s;
 }
 
-.button-close-modal:hover {
+.button-close-modal:hover,
+.button-close-modal:focus {
   transform: scale(0.85);
 }
 

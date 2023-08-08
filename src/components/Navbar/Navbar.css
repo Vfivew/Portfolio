@@ -28,7 +28,7 @@ max-height: 100%;
   opacity: 0.9;
 }
 
-.Navbar > .nav-items > a:hover {
+.Navbar > .nav-items > a:hover{
   opacity: 1;
 }
 

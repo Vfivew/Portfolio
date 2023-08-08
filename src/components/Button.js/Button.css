@@ -11,7 +11,8 @@
   transition: transform 0.4s;
 }
 
-.button:hover {
+.button:hover,
+.button:focus {
   color:white;
   background-color: var(--secondary-color);
   transform: scale(0.8); 
@@ -37,6 +38,7 @@
   z-index: 5;
 }
 
-.button-close:hover{
+.button-close:hover,
+.button-close:focus{
   transform: scale(0.85);
 }

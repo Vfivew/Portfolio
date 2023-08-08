@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import useFormValidation from '../../hook/UseValidate';
 import './Form.css';
 
-const Form = ({ closeModal,handleBackdropClick }) => {
+const Form = ({ closeModal, handleBackdropClick }) => {
   const {
     name,
     setName,
@@ -28,6 +28,11 @@ const Form = ({ closeModal,handleBackdropClick }) => {
   } = useFormValidation();
 
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    setIsOpen(true); 
+  }, []);
 
   const blurHandler = (e) => {
     switch (e.target.name) {
@@ -60,8 +65,8 @@ const Form = ({ closeModal,handleBackdropClick }) => {
   };
 
   return (
-    <div className="modal-container" onClick={handleBackdropClick}>
-      <div className="modal-content-inner">
+    <div className={`modal-container ${isOpen ? 'fadeIn' : ''}`} onClick={handleBackdropClick}>
+      <div className={`modal-content-inner ${isOpen ? 'fadeIn' : ''}`}>
         {isFormSubmitted ? (
           <div>
             <h2>Дякуємо за заповнення форми!</h2>
@@ -152,7 +157,7 @@ const Form = ({ closeModal,handleBackdropClick }) => {
               Відправити
             </button>
           </form>
-          )}
+        )}
       </div>
     </div>
   );
