@@ -1,0 +1,88 @@
+.header-container {
+  border: 1px solid;
+  flex-wrap: wrap;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; 
+  gap: 10px; 
+  background-image: url(../../resources/image/background-header-and-represent.jpg)
+}
+
+.header-title {
+  font-family: var(--secondary-font);
+  margin: 10px;
+}
+
+.icon-wrapper-header {
+  color:var(--secondary-color);
+  font-size: 28px;
+}
+
+.icon-wrapper-header:hover{
+  color:var(--primary-color);
+}
+
+.phone-number {
+  font-size: var(--primary-size);
+  color: var(--secondary-color);
+  font-family: var(--secondary-font);
+  text-decoration: none;
+  position: relative; 
+}
+
+.phone-number::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px; 
+  width: 100%;
+  height: 2px;
+  background-color: var(--secondary-color);
+  transform-origin: right; 
+  transform: scaleX(0); 
+  transition: transform 0.3s ease; 
+}
+
+.phone-number:hover::after {
+  transform-origin: left; 
+  transform: scaleX(1);
+}
+
+.list-contact {
+  margin-bottom:0.5em;
+}
+
+@media (max-width: 767px){
+  .header-container {
+  display: block;
+  text-align: center;
+  }
+  
+.list-contact{
+  padding-left: 0;
+  }
+
+}
+
+@media (min-width: 1980px){
+  .header-container {
+  font-size: 50px;
+  }
+
+  .phone-number {
+  font-size: 50px;
+}
+
+.header-title {
+  font-size: var(--thirty-size);
+}
+
+.icon-wrapper-header {
+  font-size: 50px;
+}
+
+.list-contact {
+  margin-top:0.3em;
+}
+}

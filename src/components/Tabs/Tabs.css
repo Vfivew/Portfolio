@@ -1,0 +1,133 @@
+.tabs-container {
+  font-size: var(--primary-size);
+  font-family: var(--primary-font);
+  width: 100%;
+  min-height: 70vh;
+  margin-top: 1em;
+  background-color: var(--thirty-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-service {
+  font-size: var(--thirty-size);
+  font-family: var(--secondary-font);
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.tabs {
+  padding: 1em 1em 1em 1em;
+  display: flex;
+  width: 90%;
+  height: auto;
+  background-color: var(--thirty-color);
+  box-shadow: 0 2px 4px var(--secondary-color);
+}
+
+.tab-items {
+  display: block;
+  width: 50%;
+  padding: 16px;
+  border-right: 1px solid var(--secondary-color);
+}
+
+.tabs-services {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.1), 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tab-item {
+  flex-grow: 1;
+  flex-basis: 25%;
+  padding: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tab-content {
+  margin-top: 1em;
+}
+
+.tab-item.active {
+  background-color: var(--secondary-color);
+  color: var(--thirty-color);
+}
+
+.tab-image {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--thirty-color);
+}
+
+.tab-image-item {
+  text-align: center;
+}
+
+.tab-image img {
+  max-width: 90%;
+}
+@media (max-width: 767px) {
+  .tabs-container {
+    margin-bottom: 10px;
+  }
+
+  .tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tabs-services {
+    margin-top: 0.5em;
+    width: 95%;
+  }
+
+  .tab-image {
+    padding: 16px;
+    background-color: var(--thirty-color);
+    text-align: center;
+    width: 100%;
+  }
+
+   .tab-image img{
+    max-width: 50%; 
+  }
+
+  .tab-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-right: none;
+    padding: 0; 
+  }
+
+  .tab-content {
+    padding: 0 0.5em 0 0.5em;
+    margin-top: 1em;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1980px) {
+  .tab-image-item img {
+  min-width: 40%;
+  min-height: 40vh;
+}
+
+.tab-items {
+  font-size: 40px;
+  width: 50%;
+  padding: 16px;
+}
+
+}
+

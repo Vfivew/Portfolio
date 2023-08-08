@@ -1,0 +1,50 @@
+.button-style{
+    padding-left: 3.75em;
+}
+
+.title-introduce{
+    font-size: var(--thirty-size);
+    font-family: var(--secondary-font);
+}
+
+.text-introduce{
+    font-size: var(--secondary-size);
+}
+
+/*media*/
+@media (max-width: 576px) {
+  .home-page {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .introduce-image,
+  .introduce-product-background {
+    min-height: 100vh;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+    .welcome-slogan {
+        padding-top: 1em;
+        font-size:var(--secondary-size);
+    }
+    .button-style{
+    padding: 10px 14px;
+    padding-left: 0.9em;
+    }
+    .button {
+        padding: 10px 14px;
+    }
+}
+
+@media (min-width: 1980px) {
+    .button-style{
+        padding-left: 5.6em;
+    }
+     .button {
+        font-size: 56px;
+        padding: 26px 56px ;
+    }
+}

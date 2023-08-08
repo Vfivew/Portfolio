@@ -1,0 +1,83 @@
+.gallary-wrapper {
+  background-image: url(../../resources/image/background-header-and-represent.jpg);
+  padding: 2vh 1vh 2vh 1vh;
+}
+
+.gallery-images {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  column-gap: 25px;
+  row-gap: 25px;
+  max-width: 100%;
+  overflow: hidden;
+  padding-left: 0;
+}
+
+.gallery-image {
+  padding: 1em;
+}
+
+.gallery-image img {
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+  transition: opacity 0.3s;
+}
+
+.gallery-image:hover img {
+  opacity: 0.8;
+}
+
+.my-gallery-title{
+  font-size: var(--thirty-size);
+  font-family: var(--secondary-font);
+  text-align: center;
+}
+
+.button-container{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+.slider-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-close-button {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.button-close{
+  background-color:aqua;
+  z-index: 4;
+}
+
+@media (min-width: 1980px){
+  .slider-close-button {
+  font-size: 4rem;
+  }
+}
+
+@media (max-width: 767px){
+  .slider-close-button {
+  font-size: 0.8rem;
+  }
+}

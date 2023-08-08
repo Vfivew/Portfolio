@@ -1,0 +1,142 @@
+.footer {
+   font-family: var(--secondary-font);
+   font-size: var(--primary-size);
+   border-top: 2px solid var(--primary-color); 
+   color: var(--thirty-color);
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   width: 100%;
+   height: auto;
+   margin: 0 auto;
+   padding-top: 2em;
+   background-color:var(--secondary-color);
+   padding-bottom: 18px;
+   position: relative;
+}
+
+.contact {
+   padding-left: 0;
+   list-style: none;
+   text-align: left;
+}
+
+.socialNetworks {
+   padding-left: 0;
+   text-align: left;
+   list-style: none;
+}
+
+.contact a,
+.socialNetworks a {
+  color:var(--thirty-color);;
+  text-decoration: none;
+}
+
+.contact li {
+   margin-bottom: 5px;
+   padding-top: 2px;
+}
+
+.socialNetworks li {
+   margin-bottom: 5px;
+}
+
+
+.instagram {
+   margin-right: 5px;
+   position: relative;
+}
+
+.facebook{
+   margin-right: 5px;
+   position: relative;
+}
+
+.telegram {
+   margin-right: 5px;
+   position: relative;
+}
+
+.viber {
+   margin-right: 5px;
+   position: relative;
+}
+
+.phone-icon {
+   bottom: 1px;
+   margin-right: 5px;
+   position: relative;
+}
+
+.location-icon {
+   margin-right: 5px;
+   position: relative;
+}
+
+.time-icon {
+  margin-right: 5px;
+  position: relative;
+  bottom: 2px;
+}
+
+.time {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.contact-title {
+   display: block;
+   margin-bottom: 10px;
+   font-weight:500
+}
+.contact a:hover,
+.socialNetworks a:hover,
+.icon-wrapper:hover .iconify {
+   color: var(--primary-color);
+}
+
+.footer::after {
+  content: '';
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  height: 2px;
+  background-color: var(--thirty-color);
+  position: absolute;
+  bottom: 46px;
+  left: 5%;
+}
+
+.footer-text {
+  width: 100%;
+  text-align: center;
+  margin-top: 18px;
+  background-color: var(--sedondary-color);
+}
+
+@media (max-width: 767px) {
+.contact {
+   list-style: none;
+   text-align: center;
+}
+
+.socialNetworks {
+   text-align: center;
+   list-style: none;
+}
+}
+
+@media (min-width: 1980px) {
+.footer{
+   font-size: 50px;
+}
+
+.footer::after {
+  bottom: 100px;
+}
+
+.contact-title {
+   font-size: var(--secondary-font);
+}
+}

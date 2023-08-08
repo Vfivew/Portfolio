@@ -1,0 +1,77 @@
+.introduce-myself-wrapper {
+    margin: 1em 1em 1em 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    margin-bottom: 40px;
+    font-size: var(--secondary-size);
+}
+
+.title-introduce{
+    padding: 0em 1em 0em 1em;
+    font-size: var(--thirty-size);
+    font-family: var(--secondary-font);
+    overflow-wrap: break-word;
+}
+
+.text-introduce{
+    padding: 0em 1em 0em 1em;
+    font-size: var(--secondary-size);
+    overflow-wrap: break-word;
+}
+
+.introduce-myself-image-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    padding: 1vh 0 8vh 0;
+    width: 50%;
+}
+
+.introduce-myself-image {
+    max-width: 80%;
+    min-height: 40vh;
+    max-height: 538px;
+    z-index: -1;
+}
+
+.introduce-myself {
+    text-align: center;
+    width: 50%;
+}
+
+.backgroundItem,
+.backgroundItemLine {
+    position: absolute;
+}
+
+.backgroundItem {
+    height: 80%;
+    width: 80%;
+    bottom: 0%;
+    right: 0px; 
+    z-index: -3;
+}
+
+.backgroundItemLine {
+    height: 80%;
+    width: 80%;
+    bottom: 5%;
+    left: 0px; 
+    z-index: -2;
+}
+
+
+@media (max-width: 767px) {
+.introduce-myself-wrapper {
+    font-size: var(--secondary-size);
+}
+
+.text-introduce{
+    font-size: var(--primary-size);
+}
+}
+
+@media (min-width: 1980px) {
+  
+}

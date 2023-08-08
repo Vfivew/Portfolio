@@ -1,0 +1,42 @@
+
+.button {
+  padding: 12px 26px;
+  background-color:var(--primary-color);;
+  color: black;
+  border: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 900;
+  outline: none; 
+  transition: transform 0.4s;
+}
+
+.button:hover {
+  color:white;
+  background-color: var(--secondary-color);
+  transform: scale(0.8); 
+
+}
+
+.button:active {
+  background-color: grey;
+  transform: scale(0.85);
+}
+.button-close {
+  position: fixed;
+  padding: 12px 26px;
+  background-color:var(--primary-color);;
+  color: black;
+  border: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 900;
+  transition: transform 0.4s;
+  top:1em;
+  right:1em;
+  z-index: 5;
+}
+
+.button-close:hover{
+  transform: scale(0.85);
+}

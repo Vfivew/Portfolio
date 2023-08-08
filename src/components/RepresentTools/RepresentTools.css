@@ -1,0 +1,58 @@
+.welcome-part {
+    width: 100%;
+    min-height: 60vh;
+    max-height: 642px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../../resources/image/welcome-image.jpg');
+    display: flex; 
+    justify-content: left; 
+    align-items: center; 
+    padding-left: 20px;
+    margin-bottom: 40px;
+}
+
+.welcome-slogan-wrapper {
+    display:block;
+    text-align: left;
+    max-width: 50%; 
+}
+
+.welcome-slogan {
+    padding-left: 1em;
+    font-size:var(--thirty-size);
+    font-family: var(--secondary-font);
+    word-wrap: break-word; 
+}
+
+.home-page {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.introduce-image {
+    width: 100vw;
+    min-height: 50vh;
+    max-height: 538px;
+    background-image: url(../../resources/image/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.introduce-product-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    width: 100vw; 
+    min-height: 50vh;
+    max-height: 538px;
+    background-image: url(../../resources/image/bg2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.introduce-product{
+    text-align: center;
+}
