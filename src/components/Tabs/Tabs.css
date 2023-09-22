@@ -41,6 +41,7 @@
 }
 
 .tab-item {
+  font-weight: bold;
   flex-grow: 1;
   flex-basis: 25%;
   padding: 8px;

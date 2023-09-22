@@ -4,6 +4,7 @@ import itsMe from '../../resources/image/its-me.jpg'
 import Gallery from '../../components/Gallery/Gallery';
 import Slider from '../../components/Slider/Slider';
 import useSlider from '../../hook/UseSlider';
+import Separate from '../../components/Separate/Separate';
 
 const AboutUs = () => {
 
@@ -11,6 +12,7 @@ const AboutUs = () => {
 
     return (
         <div>
+        <Separate/>
         <Represent
         representStyle='left'
         title='Мене звати Імя'
@@ -19,6 +21,7 @@ const AboutUs = () => {
         />
         <Gallery openSlider={openSlider} />
         {showSlider && selectedImage && <Slider image={selectedImage} closeSlider={closeSlider} />}
+        <Separate/>
         </div>
     );
 };

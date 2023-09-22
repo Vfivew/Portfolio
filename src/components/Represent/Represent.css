@@ -65,6 +65,18 @@
 @media (max-width: 767px) {
 .introduce-myself-wrapper {
     font-size: var(--secondary-size);
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.introduce-myself-image-wrapper{
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+.introduce-myself{
+    width: 100%;
 }
 
 .text-introduce{

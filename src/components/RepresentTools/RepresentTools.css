@@ -4,6 +4,7 @@
     max-height: 642px;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center; 
     background-image: url('../../resources/image/welcome-image.jpg');
     display: flex; 
     justify-content: left; 
