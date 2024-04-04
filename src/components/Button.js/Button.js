@@ -1,4 +1,4 @@
-import { useState } from '../../hook/hooks';
+import { useState } from '../../hooks/hooks';
 import Form from '../Form/Form';
 import './Button.css';
 

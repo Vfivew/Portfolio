@@ -1,4 +1,4 @@
-import { useSlider } from "../../hook/hooks";
+import { useSlider } from "../../hooks/hooks";
 import Gallery from "../../components/Gallery/Gallery";
 import Represent from "../../components/Represent/Represent";
 import Slider from "../../components/Slider/Slider";

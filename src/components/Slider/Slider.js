@@ -1,6 +1,6 @@
 import Carousel from "react-bootstrap/Carousel";
 
-import { useRef, useState } from "../../hook/hooks";
+import { useRef, useState } from "../../hooks/hooks";
 import { galleryImage } from "../../resources/gallery-image/galleryImage";
 import "./Slider.css";
 
