@@ -1,50 +1,51 @@
-import React from 'react';
-import Gallery from '../../components/Gallery/Gallery';
-import Represent from '../../components/Represent/Represent'
-import Slider from '../../components/Slider/Slider';
-import itsMe from '../../resources/image/its-me.jpg'
-import Button from '../../components/Button.js/Button';
-import useSlider from '../../hook/UseSlider';
-import RepresentTools from '../../components/RepresentTools/RepresentTools';
-import Separate from '../../components/Separate/Separate';
-
-import './Home.css'
-import Tabs from '../../components/Tabs/Tabs';
+import { useSlider } from "../../hook/hooks";
+import Gallery from "../../components/Gallery/Gallery";
+import Represent from "../../components/Represent/Represent";
+import Slider from "../../components/Slider/Slider";
+import itsMe from "../../resources/image/its-me.jpg";
+import Button from "../../components/Button.js/Button";
+import RepresentTools from "../../components/RepresentTools/RepresentTools";
+import Separate from "../../components/Separate/Separate";
+import Tabs from "../../components/Tabs/Tabs";
+import "./Home.css";
 
 const Home = () => {
+  const { showSlider, selectedImage, openSlider, closeSlider } = useSlider();
 
-const { showSlider, selectedImage, openSlider, closeSlider } = useSlider();
-
-return (
-<div>
-    <section className='welcome-part'>
-      <div className='welcome-slogan-wrapper'>
-        <h2 className='welcome-slogan'>"Втілюємо твої мрії в неповторний образ"</h2>
+  return (
+    <div>
+      <section className="welcome-part">
+        <div className="welcome-slogan-wrapper">
+          <h2 className="welcome-slogan">
+            "Втілюємо твої мрії в неповторний образ"
+          </h2>
           <Button className="" text="Записатися" />
-      </div>
-    </section>
-        <Separate/>
-        <Represent
-        representStyle='left'
-        title='Мене звати Імя'
-        text='Професійний візажист з великим досвідом у створенні неперевершених образів. Моє завдання - підкреслити вашу красу та підняти настрій, залишаючи вам яскраві спогади.'
-        image={itsMe}
-        />
-        <Separate/>
-      <RepresentTools/>
-      <Gallery openSlider={openSlider} />
-      {showSlider && selectedImage && <Slider image={selectedImage} closeSlider={closeSlider} />}
-      <Separate/>
-      <Tabs/>  
-      <Separate/>
+        </div>
+      </section>
+      <Separate />
       <Represent
-        representStyle='right'
-        title='Оберіть мене для особливих моментів вашого життя.'
-        text='Моя стильна робота та уважність до деталей зроблять вас неперевершеною на будь-якому заході. Довірте мені створення неповторного образу, який залишить яскраві спогади назавжди.'
+        representStyle="left"
+        title="Мене звати Імя"
+        text="Професійний візажист з великим досвідом у створенні неперевершених образів. Моє завдання - підкреслити вашу красу та підняти настрій, залишаючи вам яскраві спогади."
         image={itsMe}
       />
-      <Separate/>
-</div>
+      <Separate />
+      <RepresentTools />
+      <Gallery openSlider={openSlider} />
+      {showSlider && selectedImage && (
+        <Slider image={selectedImage} closeSlider={closeSlider} />
+      )}
+      <Separate />
+      <Tabs />
+      <Separate />
+      <Represent
+        representStyle="right"
+        title="Оберіть мене для особливих моментів вашого життя."
+        text="Моя стильна робота та уважність до деталей зроблять вас неперевершеною на будь-якому заході. Довірте мені створення неповторного образу, який залишить яскраві спогади назавжди."
+        image={itsMe}
+      />
+      <Separate />
+    </div>
   );
 };
 

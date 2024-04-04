@@ -1,4 +1,3 @@
-import React from 'react';
 import Tabs from '../../components/Tabs/Tabs';
 import RepresentTools from '../../components/RepresentTools/RepresentTools';
 import Separate from '../../components/Separate/Separate';

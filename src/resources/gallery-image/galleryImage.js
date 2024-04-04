@@ -58,6 +58,6 @@ const galleryImage = [ {
     title: "Фото 3",
     description: 'Приклад робіт',
 },
-] 
+]
 
 export {galleryImage} ;

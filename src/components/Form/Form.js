@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import useFormValidation from '../../hook/UseValidate';
-import './Form.css';
+import { useState, useEffect } from '../../hook/hooks';
+
+import {useFormValidation} from "../../hook/hooks";
+
+import "./Form.css";
 
 const Form = ({ closeModal, handleBackdropClick }) => {
   const {
@@ -26,26 +28,21 @@ const Form = ({ closeModal, handleBackdropClick }) => {
     selectedServiceError,
     commentsError,
   } = useFormValidation();
-
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    setIsOpen(true); 
-  }, []);
-
   const blurHandler = (e) => {
     switch (e.target.name) {
-      case 'name':
+      case "name":
         setIsNameDirty(true);
         break;
-      case 'phoneNumber':
+      case "phoneNumber":
         setIsPhoneNumberDirty(true);
         break;
-      case 'selectedService':
+      case "selectedService":
         setIsServiceDirty(true);
         break;
-      case 'comments':
+      case "comments":
         setIsCommentsDirty(true);
         break;
       default:
@@ -56,32 +53,43 @@ const Form = ({ closeModal, handleBackdropClick }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (isFormValid) {
-      console.log('Name:', name);
-      console.log('Phone Number:', phoneNumber);
-      console.log('Selected Service:', selectedService);
-      console.log('Comments:', comments);
       setIsFormSubmitted(true);
     }
   };
 
+  useEffect(() => {
+    setIsOpen(true);
+  }, []);
+
   return (
-    <div className={`modal-container ${isOpen ? 'fadeIn' : ''}`} onClick={handleBackdropClick}>
-      <div className={`modal-content-inner ${isOpen ? 'fadeIn' : ''}`}>
+    <div
+      className={`modal-container ${isOpen && "fadeIn"}`}
+      onClick={handleBackdropClick}
+    >
+      <div className={`modal-content-inner ${isOpen && "fadeIn"}`}>
         {isFormSubmitted ? (
-          <div>
+          <section>
             <h2>Дякуємо за заповнення форми!</h2>
             <p>Ваша заявка успішно відправлена.</p>
-            <button className='button-close-modal' type="button" onClick={closeModal}>
+            <button
+              className="button-close-modal"
+              type="button"
+              onClick={closeModal}
+            >
               Закрити
             </button>
-          </div>
+          </section>
         ) : (
           <form onSubmit={handleSubmit} className="form">
             <h2>Записатись</h2>
             <p>Заповніть форму</p>
             <div>
-              <label htmlFor="name">Ім'я:</label>
-              {isNameDirty && nameError && <div style={{ color: 'red' }}>{nameError}</div>}
+              <label className="form-input" htmlFor="name">
+                Ім'я:
+              </label>
+              {isNameDirty && nameError && (
+                <div className="error">{nameError}</div>
+              )}
               <input
                 type="text"
                 id="name"
@@ -96,9 +104,11 @@ const Form = ({ closeModal, handleBackdropClick }) => {
               />
             </div>
             <div>
-              <label htmlFor="phoneNumber">Номер телефону:</label>
+              <label className="form-input" htmlFor="phoneNumber">
+                Номер телефону:
+              </label>
               {isPhoneNumberDirty && phoneNumberError && (
-                <div style={{ color: 'red' }}>{phoneNumberError}</div>
+                <div className="error">{phoneNumberError}</div>
               )}
               <input
                 type="tel"
@@ -114,9 +124,11 @@ const Form = ({ closeModal, handleBackdropClick }) => {
               />
             </div>
             <div>
-              <label htmlFor="service">Оберіть послугу:</label>
+              <label className="form-input" htmlFor="service">
+                Оберіть послугу:
+              </label>
               {isServiceDirty && selectedServiceError && (
-                <div style={{ color: 'red' }}>{selectedServiceError}</div>
+                <div className="error">{selectedServiceError}</div>
               )}
               <select
                 id="service"
@@ -137,9 +149,11 @@ const Form = ({ closeModal, handleBackdropClick }) => {
               </select>
             </div>
             <div>
-              <label htmlFor="comments">Побажання та коментар</label>
+              <label className="form-input" htmlFor="comments">
+                Побажання та коментар
+              </label>
               {isCommentsDirty && commentsError && (
-                <div style={{ color: 'red' }}>{commentsError}</div>
+                <div className="error">{commentsError}</div>
               )}
               <textarea
                 id="comments"
@@ -150,10 +164,14 @@ const Form = ({ closeModal, handleBackdropClick }) => {
                   setIsCommentsDirty(true);
                 }}
                 onBlur={(e) => blurHandler(e)}
-                style={{ width: '100%', height: '6em', resize: 'vertical' }}
+                style={{ width: "100%", height: "6em", resize: "vertical" }}
               />
             </div>
-            <button type="submit" className="submit-button" disabled={!isFormValid}>
+            <button
+              type="submit"
+              className="submit-button"
+              disabled={!isFormValid}
+            >
               Відправити
             </button>
           </form>

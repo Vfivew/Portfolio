@@ -1,14 +1,9 @@
-import React from 'react';
-import SeparateImg from '../../resources/image/SeparateImg.png'
+import SeparateImg from "../../resources/image/SeparateImg.png";
 
-import './Separate.css'
+import "./Separate.css";
 
 const Separate = () => {
-    return (
-
-        <img className='separate' src={SeparateImg}  alt="Логотип"></img>
-
-    );
+  return <img className="separate" src={SeparateImg} alt="Логотип"></img>;
 };
 
 export default Separate;

@@ -1,15 +1,17 @@
-import React from 'react';
-import './Header.css'
 import { Icon } from '@iconify/react';
+
 import { socialNetworks } from '../../resources/contact';
+import "./Header.css";
 
 const renderContactList = (contacts) => {
   return (
-    <ul className='list-contact'>
+    <ul className="list-contact">
       {socialNetworks.map((contact, index) => (
-        <a key={index} href={contact.link} className="icon-wrapper-header">
-          <Icon className={contact.iconClass} icon={contact.icon} />
-        </a>
+        <li key={index} className="list-item">
+          <a href={contact.link} className="icon-wrapper-header">
+            <Icon className={contact.iconClass} icon={contact.icon} />
+          </a>
+        </li>
       ))}
     </ul>
   );

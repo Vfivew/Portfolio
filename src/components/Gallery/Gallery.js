@@ -1,23 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from "../../hook/hooks";
+
 import Slider from '../Slider/Slider';
 import Spinner from '../Spinner/Spinner';
-import './Gallery.css';
 import { galleryImage } from '../../resources/gallery-image/galleryImage';
+import "./Gallery.css";
 
 const Gallery = () => {
   const [imagesToShow, setImagesToShow] = useState(4);
-  const [loading, setLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [showSlider, setShowSlider] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
   const totalImages = galleryImage.length;
 
   useEffect(() => {
-    setLoading(false);
+    setIsLoading(false);
   }, [imagesToShow]);
 
-  const loadMoreImages = async () => {
-    if (imagesToShow < totalImages && !loading) {
-      setLoading(true);
+  const loadMoreImages = () => {
+    if (imagesToShow < totalImages && !isLoading) {
+      setIsLoading(true);
       setImagesToShow((prevImagesToShow) => prevImagesToShow + 4);
     }
   };
@@ -39,15 +40,15 @@ const Gallery = () => {
   };
 
   return (
-    <div className='gallary-wrapper'>
-      <section className='my-gallery'>
-        <h2 className='my-gallery-title'>Мої роботи</h2>
-        <ul className='gallery-images'>
+    <div className="gallary-wrapper">
+      <section className="my-gallery">
+        <h2 className="my-gallery-title">Мої роботи</h2>
+        <ul className="gallery-images">
           {galleryImage.slice(0, imagesToShow).map((image, index) => (
             <li
-              className='gallery-image'
+              className="gallery-image"
               key={image.id}
-              style={{ opacity: loading ? 0 : 1 }}
+              style={{ opacity: isLoading ? 0 : 1 }}
             >
               <img
                 src={image.imageUrl}
@@ -60,16 +61,19 @@ const Gallery = () => {
           ))}
         </ul>
         {imagesToShow < totalImages && (
-          <div className='button-container'>
-            <button className='button' onClick={loadMoreImages}>
+          <div className="button-container">
+            <button className="button" onClick={loadMoreImages}>
               Показати більше
             </button>
-            {loading && <Spinner />}
+            {isLoading && <Spinner />}
           </div>
         )}
       </section>
       {showSlider && (
-        <Slider selectedImageIndex={selectedImageIndex} onClose={closeSliderModal} />
+        <Slider
+          selectedImageIndex={selectedImageIndex}
+          onClose={closeSliderModal}
+        />
       )}
     </div>
   );
