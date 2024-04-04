@@ -1,6 +1,6 @@
-import { useState, useEffect } from '../../hook/hooks';
+import { useState, useEffect } from '../../hooks/hooks';
 
-import {useFormValidation} from "../../hook/hooks";
+import {useFormValidation} from "../../hooks/hooks";
 
 import "./Form.css";
 

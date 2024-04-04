@@ -1,4 +1,4 @@
-import { useState, useEffect } from "../../hook/hooks";
+import { useState, useEffect } from "../../hooks/hooks";
 
 import "./ScrollTop.css";
 

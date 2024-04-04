@@ -1,4 +1,4 @@
-import { useSlider } from "../../hook/hooks";
+import { useSlider } from "../../hooks/hooks";
 import Represent from "../../components/Represent/Represent";
 import itsMe from "../../resources/image/its-me.jpg";
 import Gallery from "../../components/Gallery/Gallery";

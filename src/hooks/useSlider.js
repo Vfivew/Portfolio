@@ -1,4 +1,4 @@
-import { useState } from "../hook/hooks";
+import { useState } from "./hooks";
 
 const useSlider = () => {
   const [showSlider, setShowSlider] = useState(false);
@@ -21,4 +21,4 @@ const useSlider = () => {
   };
 };
 
-export {useSlider};
+export { useSlider };

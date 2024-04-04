@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-import { useEffect, useState } from "../../hook/hooks";
+import { useEffect, useState } from "../../hooks/hooks";
 import Logo from "../../resources/image/Logo.png";
 import "./Navbar.css";
 

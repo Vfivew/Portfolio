@@ -1,4 +1,4 @@
-import { useState } from "../../hook/hooks";
+import { useState } from "../../hooks/hooks";
 import tabsData from "../../resources/tabs-image";
 import TabItem from "./TabItem/TabItem";
 import "./Tabs.css";
