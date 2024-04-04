@@ -14,7 +14,6 @@ const contacts = [
     {
         iconClass: 'time-icon',
         icon: 'carbon:time',
-        //link none
         label: `Пн-ПТ 09:00-18:00 Сб 10:00-16:00`
     },
 ];

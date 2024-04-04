@@ -1,6 +1,6 @@
 .gallary-wrapper {
   background-image: url(../../resources/image/background-header-and-represent.jpg);
-  padding: 2vh 1vh 2vh 1vh;
+  padding: 24px 12px;
 }
 
 .my-gallery-title {
@@ -29,14 +29,13 @@
   cursor: pointer;
   width: 100%;
   height: auto;
+  transition: .3s;
 }
-
 
 .gallery-image img:hover,
 .gallery-image img:focus {
   opacity: 0.8;
 }
-
 
 .button-container {
   display: grid;
@@ -65,22 +64,23 @@
   border: none;
   color: white;
   cursor: pointer;
-  font-size: 1.5rem;
-}
-
-.button-close {
-  background-color: aqua;
-  z-index: 4;
+  font-size: 30px;
 }
 
 @media (min-width: 1980px) {
   .slider-close-button {
-    font-size: 4rem;
+    font-size: 56px;
   }
 }
 
 @media (max-width: 767px) {
   .slider-close-button {
-    font-size: 0.8rem;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-close-button {
+    font-size: 10px;
   }
 }

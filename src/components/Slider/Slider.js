@@ -1,7 +1,8 @@
-import React, { useRef, useState } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-import { galleryImage } from '../../resources/gallery-image/galleryImage';
-import './Slider.css';
+import Carousel from "react-bootstrap/Carousel";
+
+import { useRef, useState } from "../../hook/hooks";
+import { galleryImage } from "../../resources/gallery-image/galleryImage";
+import "./Slider.css";
 
 const Slider = ({ onClose, selectedImageIndex }) => {
   const sliderRef = useRef();
@@ -13,7 +14,7 @@ const Slider = ({ onClose, selectedImageIndex }) => {
   };
 
   const handleSliderClick = (e) => {
-    if (e.target.tagName === 'DIV') {
+    if (e.target.tagName === "DIV") {
       handleCloseSlider();
     }
   };
@@ -26,12 +27,12 @@ const Slider = ({ onClose, selectedImageIndex }) => {
 
   return (
     <div
-      className={`slider-overlay ${closing ? 'closing' : ''}`}
+      className={`slider-overlay ${closing ? "closing" : ""}`}
       onClick={handleSliderClick}
-      onAnimationEnd={handleAnimationEnd} 
+      onAnimationEnd={handleAnimationEnd}
     >
-      <div className='slider-container' ref={sliderRef}>
-        <button className='slider-close-button' onClick={handleCloseSlider}>
+      <div className="slider-container" ref={sliderRef}>
+        <button className="slider-close-button" onClick={handleCloseSlider}>
           Згорнути
         </button>
         <Carousel
@@ -40,7 +41,11 @@ const Slider = ({ onClose, selectedImageIndex }) => {
         >
           {galleryImage.map((image) => (
             <Carousel.Item key={image.id}>
-              <img className='d-block mx-auto' src={image.imageUrl} alt={image.title} />
+              <img
+                className="d-block mx-auto"
+                src={image.imageUrl}
+                alt={image.title}
+              />
             </Carousel.Item>
           ))}
         </Carousel>

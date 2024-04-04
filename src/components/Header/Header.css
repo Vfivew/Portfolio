@@ -4,9 +4,9 @@
   max-width: 100%;
   display: flex;
   justify-content: space-around;
-  align-items: center; 
-  gap: 10px; 
-  background-image: url(../../resources/image/background-header-and-represent.jpg)
+  align-items: center;
+  gap: 10px;
+  background-image: url(../../resources/image/background-header-and-represent.jpg);
 }
 
 .header-title {
@@ -15,12 +15,14 @@
 }
 
 .icon-wrapper-header {
-  color:var(--secondary-color);
+  color: var(--secondary-color);
   font-size: 28px;
+  transition: 0.3s;
 }
+
 .icon-wrapper-header:focus,
-.icon-wrapper-header:hover{
-  color:var(--primary-color);
+.icon-wrapper-header:hover {
+  color: var(--primary-color);
 }
 
 .phone-number {
@@ -28,61 +30,63 @@
   color: var(--secondary-color);
   font-family: var(--secondary-font);
   text-decoration: none;
-  position: relative; 
+  position: relative;
 }
 
 .phone-number::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
-  bottom: -2px; 
+  bottom: -2px;
   width: 100%;
   height: 2px;
   background-color: var(--secondary-color);
-  transform-origin: right; 
-  transform: scaleX(0); 
-  transition: transform 0.3s ease; 
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
 }
 
 .phone-number:hover::after {
-  transform-origin: left; 
+  transform-origin: left;
   transform: scaleX(1);
 }
 
 .list-contact {
-  margin-bottom:0.5em;
+  display: flex;
+  gap: 10px;
 }
 
-@media (max-width: 767px){
+@media (max-width: 767px) {
   .header-container {
-  display: block;
-  text-align: center;
-  }
-  
-.list-contact{
-  padding-left: 0;
+    display: block;
+    text-align: center;
   }
 
+  .header-container .list-contact {
+    justify-content: center;
+    padding-left: 0;
+    margin: 6px 0;
+  }
 }
 
-@media (min-width: 1980px){
+@media (min-width: 1980px) {
   .header-container {
-  font-size: 50px;
+    font-size: 50px;
   }
 
   .phone-number {
-  font-size: 50px;
-}
+    font-size: 50px;
+  }
 
-.header-title {
-  font-size: var(--thirty-size);
-}
+  .header-title {
+    font-size: var(--thirty-size);
+  }
 
-.icon-wrapper-header {
-  font-size: 50px;
-}
+  .icon-wrapper-header {
+    font-size: 50px;
+  }
 
-.list-contact {
-  margin-top:0.3em;
-}
+  .list-contact {
+    margin-top: 0.3em;
+  }
 }

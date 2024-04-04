@@ -1,44 +1,43 @@
-
 .button {
   padding: 12px 26px;
-  background-color:var(--primary-color);;
-  color: black;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
   border: none;
   text-decoration: none;
   font-size: 16px;
   font-weight: 900;
-  outline: none; 
-  transition: transform 0.4s;
+  outline: none;
+  transition: 0.3s;
 }
 
 .button:hover,
 .button:focus {
-  color:white;
+  color: var(--thirty-color);
   background-color: var(--secondary-color);
-  transform: scale(0.8); 
-
 }
 
 .button:active {
   background-color: grey;
-  transform: scale(0.85);
+  transform: scale(0.9);
 }
+
 .button-close {
   position: fixed;
   padding: 12px 26px;
-  background-color:var(--primary-color);;
-  color: black;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
   border: none;
   text-decoration: none;
   font-size: 16px;
   font-weight: 900;
   transition: transform 0.4s;
-  top:1em;
-  right:1em;
+  top: 1em;
+  right: 1em;
   z-index: 5;
+  transition: 0.3s;
 }
 
 .button-close:hover,
-.button-close:focus{
-  transform: scale(0.85);
+.button-close:focus {
+  transform: scale(0.9);
 }

@@ -23,7 +23,7 @@
 
 .closing {
   animation: fadeOut 0.3s ease-in-out;
-  opacity: 0; 
+  opacity: 0;
 }
 
 @keyframes fadeInOut {
@@ -48,27 +48,27 @@
   height: auto;
   display: block;
   margin: 0 auto;
-  cursor:auto;
+  cursor: auto;
 }
 
-.slider-close-button{
+.slider-close-button {
   z-index: 1;
 }
 
-@media (min-width: 1980px){
+@media (min-width: 1980px) {
   .slider-container {
-  min-width: 50vw;
+    min-width: 50vw;
   }
 
   .carousel-item img {
-  min-width: 50vw;
+    min-width: 50vw;
   }
 
   .slider-container .carousel-indicators button {
     width: 50px;
     height: 15px;
   }
-  
+
   .slider-container .carousel-control-prev-icon,
   .slider-container .carousel-control-next-icon {
     width: 100px;
@@ -76,9 +76,8 @@
   }
 }
 
-@media (max-width: 767px){
+@media (max-width: 767px) {
   .carousel-item img {
-  max-width: 70vw;
+    max-width: 70vw;
+  }
 }
-}
-

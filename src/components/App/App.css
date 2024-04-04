@@ -11,7 +11,7 @@
   font-size: 14px;
   font-weight: 900;
   outline: none;
-  transition: transform 0.4s, box-shadow 0.4s;
+  transition: transform 0.3s, box-shadow 0.3s;
   letter-spacing: 1.3px;
   transition: all 0.3s ease-in-out 0s;
   cursor: pointer;
@@ -20,16 +20,15 @@
 }
 
 .button-callback:hover {
-    color:var(--secondary-color);
-    transform: scale(0.9);
+  color: var(--secondary-color);
 }
 
 .button-callback::before {
-  content: '';
+  content: "";
   width: 30px;
   height: 30px;
   border-radius: 100%;
-  border: 10px solid   var(--thirty-color);
+  border: 10px solid var(--thirty-color);
   position: absolute;
   z-index: -1;
   top: 50%;
@@ -39,11 +38,11 @@
 }
 
 .button-callback:hover::after {
-  content: '';
+  content: "";
   width: 30px;
   height: 30px;
   border-radius: 100%;
-  border: 10px solid   var(--primary-color);
+  border: 10px solid var(--primary-color);
   position: absolute;
   z-index: -1;
   top: 50%;
@@ -66,46 +65,46 @@
 }
 
 @media (max-width: 767px) {
-.button-callback {
-  display: none;
-}
+  .button-callback {
+    display: none;
+  }
 }
 
 @media (min-width: 1980px) {
-.button-callback{
-  bottom: 15em;
-  right: 2.2em;
-  padding: 60px 32px ;
-  border: 4px solid;
-  font-size: 38px;
-  outline: none;
-  letter-spacing: 1.3px;
-}
-
-.button-callback::before {
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  border: 20px solid   var(--thirty-color);
-}
-
-.button-callback:hover::after {
-  content: '';
-  width: 30px;
-  height: 30px;
-  border: 30px solid   var(--primary-color);
-}
-
-@keyframes ring {
-  0% {
-    width: 20px;
-    height: 20px;
-    opacity: 1;
+  .button-callback {
+    bottom: 15em;
+    right: 2.2em;
+    padding: 60px 32px;
+    border: 4px solid;
+    font-size: 38px;
+    outline: none;
+    letter-spacing: 1.3px;
   }
-  100% {
-    width: 300px;
-    height: 300px;
-    opacity: 0;
+
+  .button-callback::before {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 20px solid var(--thirty-color);
   }
-}
+
+  .button-callback:hover::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border: 30px solid var(--primary-color);
+  }
+
+  @keyframes ring {
+    0% {
+      width: 20px;
+      height: 20px;
+      opacity: 1;
+    }
+    100% {
+      width: 300px;
+      height: 300px;
+      opacity: 0;
+    }
+  }
 }

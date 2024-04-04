@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from '../../hook/hooks';
 import Form from '../Form/Form';
 import './Button.css';
 
@@ -13,29 +13,31 @@ const Button = ({ className, text }) => {
     setIsModalOpen(false);
   };
 
-  const handleClick = () => {
-    openModal();
-  };
-
   const handleBackdropClick = (e) => {
     if (e.target.classList.contains('modal-container')) {
       closeModal();
     }
   };
 
-
   return (
-    <div className='button-style'>
+    <div className="button-style">
       {!isModalOpen && (
-        <button type="button" className={`button${className}`} onClick={handleClick}>
+        <button
+          type="button"
+          className={`button${className}`}
+          onClick={openModal}
+        >
           {text}
         </button>
       )}
 
       {isModalOpen && (
         <>
-          <Form closeModal={closeModal} handleBackdropClick={handleBackdropClick} />
-          <button className='button-close' type="button" onClick={closeModal}>
+          <Form
+            closeModal={closeModal}
+            handleBackdropClick={handleBackdropClick}
+          />
+          <button className="button-close" type="button" onClick={closeModal}>
             Закрити
           </button>
         </>
